@@ -1,13 +1,20 @@
-CppLegoLab is a modular C++ learning tool designed like "Lego pieces"
-for programmers to practice and keep their skills sharp.
+# **CPP-Developer-Tools**
 
- Generate Xcode Project:
- Create a folder <repo_dir>/build_xcode
- 'cd build_xcode'
- 'cmake -G Xcode ..'
+CPP-Developer-Tools is a modular C++ learning tool designed like "Lego pieces" to help programmers practice and improve their skills.
 
+---
 
- Generate Visual Studio Code Project:
- Create a folder <repo_dir>/build_vscode
- 'cd build_vscode'
- 'cmake ..'
+## **Build Instructions**
+
+### **Generate Xcode Project**
+
+```bash
+   mkdir build_xcode && cd build_xcode
+   cmake -G Xcode ..
+```
+
+### **Generate Visual Studio Code Project**
+```bash
+ mkdir build_vscode && cd build_vscode
+ cmake ..
+```

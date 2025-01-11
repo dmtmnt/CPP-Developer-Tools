@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "mkdir build",
+        "type": "shell",
+        "command": "mkdir",
+        "args": [
+          "-p",
+          "${workspaceFolder}/build"
+        ],
+        "problemMatcher": []
+      },
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "/usr/lib64/ccache/g++",
+        "args": [
+            "-g",
+            "-std=c++17",
+            "-I${workspaceFolder}/include",
+            "${workspaceFolder}/src/*.cpp",
+            "-o",
+            "${workspaceFolder}/build/main",
+            "-lpthread"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Compiling Dumi C++17 project"
+      },
+      {
+        "label": "Run C++ Program",
+        "type": "shell",
+        "command": "${workspaceFolder}/build/main",
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        },
+        "presentation": {
+            "reveal": "always",
+            "panel": "dedicated"
+        },
+        "dependsOn": "Build and Run C++ Program"
+    }
+    ]
+  }
+  

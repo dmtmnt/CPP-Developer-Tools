@@ -32,11 +32,12 @@ bool ConcurrentQueue<T>::empty()
     return m_queue.empty();
 }
 
-// Test purpose only
+// Test purpose only/
 #include <iostream>
 #include <thread>
 #include <atomic>
 
+std::mutex cout_mutex;
 void startProducerConsumer()
 {
     ConcurrentQueue<int> queue;
@@ -66,7 +67,8 @@ void startProducerConsumer()
             }
         } });
 
-    go = true; // Start both threads
+   // Start both threads
+    go = true;
     producer.join();
     consumer.join();
 }

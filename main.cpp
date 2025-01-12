@@ -1,11 +1,10 @@
 #include <iostream>
-
-extern void startProducerConsumer();
+#include "ConcurrentQueue.h"
 
 int main()
 {
-    std::cout << "Welcome to CppLegoLab" << std::endl;
-    startProducerConsumer();
+    std::cout << "Welcome to Cpp Lego Lab!" << std::endl;
+    startProducerConsumer( );
 
     return 0;
 }

@@ -20,7 +20,7 @@ private:
     std::queue<T> m_queue;
 };
 
-std::mutex cout_mutex;
+extern std::mutex cout_mutex;
 void startProducerConsumer();
 
 #endif // CONCURRENT_QUEUE_H
